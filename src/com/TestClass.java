@@ -67,10 +67,58 @@ for (int i = 0; i < matrix.length; i++) {
   System.out.println();
 }*/
 
-		splittingStrings();
+	//	splittingStrings();
 		
+		System.out.println(print2largest(5,23,45,67,12,41));
 
 	}
+	
+	
+	public static int print2largest(int arr_size,int ...arr )
+            {
+		
+		int i, first, second;
+	      
+        /* There should be atleast two elements */
+        if (arr_size < 2)
+        {
+            System.out.print(" Invalid Input ");
+            return 0;
+        }
+      
+        first = second = Integer.MIN_VALUE;
+        for (i = 0; i < arr_size ; i++)
+        {
+            /* If current element is smaller than 
+            first then update both first and second */
+            if (arr[i] > first)
+            {
+                second = first;
+                first = arr[i];
+            }
+      
+            /* If arr[i] is in between first and 
+               second then update second  */
+            else if (arr[i] > second && arr[i] != first)
+                second = arr[i];
+        }
+         
+        if (second == Integer.MIN_VALUE)
+        {
+             System.out.print("There is no second largest"+
+                                 " element\n");
+        return 0;
+        }
+        else
+        {
+           //  System.out.print("The second largest element"+
+                                    //  " is "+ second);
+          return second;
+		
+        }
+		
+            }
+
 	
 	public static void splittingStrings()
 	{
