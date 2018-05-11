@@ -52,7 +52,7 @@ public class StringManipulation {
 		System.out.println("Split String by Space....");
 		splitStringBySpace();*/
 		
-		System.out.println("Name an american president who was shot?");
+		//System.out.println("Name an american president who was shot?");
 		
 		String usprez=ss.nextLine();
 		addSubString(usprez);
